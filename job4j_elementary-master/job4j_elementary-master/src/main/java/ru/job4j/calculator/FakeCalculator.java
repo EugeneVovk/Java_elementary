@@ -7,37 +7,24 @@ public class FakeCalculator {
         int six = 6;
         int four = 4;
         int five = 5;
-        FakeCalculator.plus(one, two);
-        FakeCalculator.div(six, two);
-        FakeCalculator.minus(five, two);
-        FakeCalculator.time(four, two);
+        int onePlusTwo = one + two;
+        int sixDivTwo = six / two;
+        int fiveMinusTwo = five - two;
+        int fourTimeTwo = four * two;
         int age = 18;
-        FakeCalculator.plus(age, 10);
+        age = age + 10;
         int size = 10;
         size = 100;
-        FakeCalculator.minus(size, 5);
+        size -= five;
+        int result = one + two;
+        System.out.println(result);
         one = 10;
         two = 11;
-        FakeCalculator.plus(one, two);
-    }
+        result = one + two;
+        int[] array = {onePlusTwo, sixDivTwo, fiveMinusTwo, fourTimeTwo, age, size, result};
 
-    public static void plus(int first, int second) {
-        int result = first + second;
-        System.out.println(result);
-    }
-
-    public static void div(int first, int second) {
-        int result = first / second;
-        System.out.println(result);
-    }
-
-    public static void minus(int first, int second) {
-        int result = first - second;
-        System.out.println(result);
-    }
-
-    public static void time(int first, int second) {
-        int result = first * second;
-        System.out.println(result);
+        for (int action : array) {
+            System.out.println(action);
+        }
     }
 }
