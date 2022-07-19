@@ -1,4 +1,4 @@
-package ru.job4j;
+package ru.job4j.type;
 
 public class Types {
     public static void main(String[] args) {
