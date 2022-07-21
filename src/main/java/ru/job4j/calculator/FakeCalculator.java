@@ -19,6 +19,8 @@ public class FakeCalculator {
         one = 10;
         two = 11;
         FakeCalculator.plus(one, two);
+        System.out.println(minusAndDivide(100, 200));
+        System.out.println(sumOfFourOperations(300, 400));
     }
 
     public static void plus(int first, int second) {
@@ -39,5 +41,17 @@ public class FakeCalculator {
     public static void time(int first, int second) {
         int result = first * second;
         System.out.println(result);
+    }
+
+    public static double minusAndDivide(int first, int second) {
+        return MathFunc.minus(first, second)
+                + MathFunc.dev(first, second);
+    }
+
+    public static double sumOfFourOperations(int first, int second) {
+        return MathFunc.dev(first, second)
+                + MathFunc.dev(first)
+                + MathFunc.multiply(first)
+                + MathFunc.minus(first, second);
     }
 }
