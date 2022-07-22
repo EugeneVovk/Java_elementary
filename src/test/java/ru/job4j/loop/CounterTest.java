@@ -24,4 +24,25 @@ public class CounterTest {
         int actual = Counter.sum(1, 1);
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void whenStart0Finish10Then30() {
+        int expected = 30;
+        int actual = Counter.sumByEven(0, 10);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void whenStart3Finish8Then() {
+        int expected = 18;
+        int actual = Counter.sumByEven(3, 8);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void whenStart1Finish1Then() {
+        int expected = 0;
+        int actual = Counter.sumByEven(1, 1);
+        Assert.assertEquals(expected, actual);
+    }
 }
