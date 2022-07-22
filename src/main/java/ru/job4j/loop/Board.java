@@ -1,5 +1,9 @@
 package ru.job4j.loop;
 
+/**
+ * В классе Board написать метод public static void paint(int width, int height),
+ * который должен рисовать шахматную доску из символов x и пробелов.
+ */
 public class Board {
     public static void paint(int width, int height) {
         for (int i = 0; i < height; i++) {
