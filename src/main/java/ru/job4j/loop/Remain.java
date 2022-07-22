@@ -2,7 +2,7 @@ package ru.job4j.loop;
 
 public class Remain {
     public static int modulo(int number, int divider) {
-        while(number >= divider) {
+        while (number >= divider) {
             number -= divider;
         }
         return number;
