@@ -1,5 +1,9 @@
 package ru.job4j.array;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.stream.Stream;
+
 /**
  * Идея состоит в том, чтобы создать массив,
  * длина которого равна сумме двух массивов для объединения.
@@ -25,8 +29,25 @@ public class ConcatenatingArrays {
         for (int i = 0; i < rslArray.length; i++) {
             rslArray[i] = (i < array1.length ? array1[i] : array2[i - array1.length]);
         }
-        for (int el : rslArray) {
+        print(rslArray);
+
+        Arrays.sort(rslArray);
+        print(rslArray);
+
+        int max = rslArray[rslArray.length - 1];
+        System.out.println("Max element: " + max);
+
+        int idx = Arrays.binarySearch(rslArray, 4);
+        System.out.println(idx);
+
+        Arrays.fill(rslArray, 0);
+        print(rslArray);
+    }
+
+    public static void print(int[] array) {
+        for (int el : array) {
             System.out.print(el + " ");
         }
+        System.out.println();
     }
 }
