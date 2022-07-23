@@ -1,8 +1,8 @@
 package ru.job4j.array;
 
 /**
- * Нужно проверить то, что строка в двухмерном массиве
- * целиком заполнена символом 'X'.
+ * Нужно проверить то, что строка, столбец или диагональ
+ * в двухмерном массиве целиком заполнена символом 'X'.
  */
 public class MatrixCheck {
     public static boolean monoHorizontal(char[][] board, int row) {
@@ -25,5 +25,13 @@ public class MatrixCheck {
             }
         }
         return result;
+    }
+
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            rsl[i] = board[i][i];
+        }
+        return rsl;
     }
 }
