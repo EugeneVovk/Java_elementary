@@ -34,4 +34,21 @@ public class MatrixCheck {
         }
         return rsl;
     }
+
+    /**
+     * Метод должен проверить, что в квадратном массиве есть
+     * строчки или столбцы, заполненные только символом 'X'
+     */
+    public static boolean isWin(char[][] board) {
+        boolean rsl = false;
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][i] == 'X'
+                    && monoHorizontal(board, i)
+                    || monoVertical(board, i)) {
+                rsl = true;
+                break;
+            }
+        }
+        return rsl;
+    }
 }
